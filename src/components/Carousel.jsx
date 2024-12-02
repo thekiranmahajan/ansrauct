@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Carousel = () => {
+const Carousel = ({images}) => {
   return (
-    <div>Carousel</div>
+    <div className='carousel'>
+      {images.map((image) => {
+        return <div>{image.title}</div>
+      })}
+      </div>
   )
 }
 
