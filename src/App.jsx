@@ -1,7 +1,11 @@
-import React from "react";
+import { Header } from "./components";
 
 const App = () => {
-  return <h1 className="text-3xl font-bold underline">Hey collaborator😁</h1>;
+  return (
+    <div className="font-poppins">
+      <Header />
+    </div>
+  );
 };
 
 export default App;
