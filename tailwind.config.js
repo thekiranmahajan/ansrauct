@@ -8,6 +8,10 @@ export default {
       fontFamily: {
         poppins: ['"Poppins"', defaultTheme.fontFamily.serif],
       },
+      colors: {
+        "custom-black": "#0A0A0A",
+        "custom-blue": "#4F46E5",
+      },
     },
   },
   plugins: [],
