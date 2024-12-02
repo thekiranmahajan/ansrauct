@@ -6,7 +6,7 @@ import { IoCloseOutline } from "react-icons/io5";
 
 const Header = () => {
   return (
-    <nav className="fixed flex h-12 w-full items-center justify-between border-b-2 border-custom-black bg-white px-3">
+    <nav className="border-custom-black fixed flex h-12 w-full items-center justify-between border-b-2 bg-white px-3">
       <div className="flex items-center justify-center">
         <img src={MARSLOGO} alt="MARS logo" className="w-20" />
         <IoCloseOutline className="text-xl text-black" />
@@ -14,7 +14,7 @@ const Header = () => {
       </div>
       <ul className="flex gap-2 text-sm uppercase">
         {SECTIONS.map((section) => (
-          <li>
+          <li key={section}>
             <a href={`#${section.toLocaleLowerCase()}`}>{section}</a>
           </li>
         ))}
