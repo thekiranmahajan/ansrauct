@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const Carousel = ({images}) => {
+const Carousel = ({ images }) => {
   return (
-    <div className='carousel'>
-      {images.map((image) => {
-        return <div>{image.title}</div>
+    <div className="carousel">
+      {images?.map((image) => {
+        return <div>{image.title}</div>;
       })}
-      </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Carousel
+export default Carousel;
