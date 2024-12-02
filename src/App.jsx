@@ -2,7 +2,7 @@ import { Header } from "./components";
 
 const App = () => {
   return (
-    <div className="font-poppins">
+    <div className="font-poppins flex">
       <Header />
     </div>
   );
