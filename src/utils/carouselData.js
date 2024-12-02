@@ -1,6 +1,8 @@
+import carouselOne from "../assets/carousel-bg/Carousel1.avif";
+
 export const carouselData = [
   {
-    image: "../assets/carousel-bg/Carousel1.avif",
+    image: carouselOne,
     title: "Videos",
     description:
       "Walkthrough videos are recorded explanations of how to accomplish a certain task. They act as visual guides listing the processes and procedures involved in the application of concept. They create an impact on learners by providing them with a visual representation of the crucial elements of learning; what, how, and in what order.",
