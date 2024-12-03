@@ -10,8 +10,13 @@ export default {
         poppins: ['"Poppins"', defaultTheme.fontFamily.serif],
       },
       colors: {
-        "custom-black": "#0A0A0A",
-        "custom-blue": "#4F46E5",
+        // MARS Color Palates
+        primary: "#00D7B9",
+        secondary: "#0000A0",
+
+        // HILTI Color Palates
+        // primary: "#D2051E",
+        // secondary: "#671A3D",
       },
     },
   },
