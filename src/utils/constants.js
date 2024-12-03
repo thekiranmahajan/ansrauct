@@ -27,3 +27,14 @@ export const SITE_LINKS = [
   "https://www.mars.com/en-in",
   "https://ansrsource.com/",
 ];
+
+// Carousel
+export const AUTO_DELAY = 1000 * 10;
+export const DRAG_BUFFER = 50;
+
+export const SPRING_OPTIONS = {
+  type: "spring",
+  mass: 3,
+  stiffness: 400,
+  damping: 50,
+};
