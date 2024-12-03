@@ -6,7 +6,7 @@ import { IoCloseOutline } from "react-icons/io5";
 
 const Header = () => {
   return (
-    <nav className="border-custom-black fixed flex h-14 w-full items-center justify-between border-b-2 bg-white px-10">
+    <nav className="border-custom-black fixed flex h-14 w-full items-center justify-between border-b-2 bg-white px-10 z-50">
       <div className="flex items-center justify-center">
         <a
           href="https://www.mars.com/en-in"
