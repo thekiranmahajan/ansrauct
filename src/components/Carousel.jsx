@@ -43,6 +43,7 @@ const Carousel = ({ images }) => {
       setImgIndex((prev) => prev - 1);
     }
   };
+
   return (
     <div>
       <motion.div
@@ -65,17 +66,24 @@ const Carousel = ({ images }) => {
           return (
             <motion.div
               key={index}
-              style={{
-                backgroundImage: `url(${imageSrc.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-              animate={{
-                scale: imgIndex === index ? 1 : 0.85,
-              }}
-              transition={SPRING_OPTIONS}
-              className="aspect-video w-screen shrink-0 bg-neutral-800 object-cover"
-            ></motion.div>
+              className="relative aspect-video w-screen shrink-0 overflow-hidden bg-neutral-800"
+            >
+              <div
+                style={{
+                  backgroundImage: `url(${imageSrc.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+                className="absolute inset-0"
+              ></div>
+
+              <div className="absolute inset-0 bg-black/50"></div>
+
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+                <h2 className="text-3xl font-bold">{imageSrc.title}</h2>
+                <p className="text-[#fffdfde8] mt-4 w-3/4 text-center">{imageSrc.description}</p>
+              </div>
+            </motion.div>
           );
         })}
       </motion.div>
