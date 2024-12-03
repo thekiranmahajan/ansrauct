@@ -11,8 +11,8 @@ export default {
       },
       colors: {
         // MARS Color Palates
-        primary: "#00D7B9",
-        secondary: "#0000A0",
+        primary: "#0000A0",
+        secondary: "#00D7B9",
 
         // HILTI Color Palates
         // primary: "#D2051E",
