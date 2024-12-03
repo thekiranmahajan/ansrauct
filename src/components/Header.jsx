@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { SECTIONS } from "../utils/constants";
-import { IoCloseOutline } from "react-icons/io5";
 import { motion } from "motion/react";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { debounce } from "lodash";
 import { HiMiniXMark } from "react-icons/hi2";
+import LogoDuplet from "./LogoDuplet";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("Home");
@@ -32,24 +32,8 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <nav className="border-secondary fixed z-50 flex h-14 w-full items-center justify-between border-b-2 bg-white px-3 sm:px-10">
-      <div className="flex items-center justify-center">
-        <a
-          href="https://www.mars.com/en-in"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/logo1.svg" alt="MARS logo" className="w-20" />
-        </a>
-        <IoCloseOutline className="m-0.5 text-xl text-black" />
-        <a
-          href="https://ansrsource.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/logo2.png" alt="ansrsource logo" className="w-32" />
-        </a>
-      </div>
+    <nav className="fixed z-50 flex h-14 w-full items-center justify-between border-b-2 border-secondary bg-white px-3 sm:px-10">
+      <LogoDuplet />
       <ul className="hidden gap-4 text-sm font-medium uppercase md:flex">
         {SECTIONS?.map((section) => (
           <li key={section}>
@@ -62,7 +46,7 @@ const Header = () => {
               {activeSection === section && (
                 <motion.div
                   layoutId="activeTab"
-                  className="bg-primary absolute bottom-2.5 h-1.5 w-1.5 rounded-full"
+                  className="absolute bottom-2.5 h-1.5 w-1.5 rounded-full bg-primary"
                   transition={{
                     type: "spring",
                     stiffness: 500,
@@ -104,7 +88,7 @@ const Header = () => {
                     <a
                       href={`#${section.toLowerCase()}`}
                       onClick={() => setMenuOpen(false)}
-                      className="hover:text-secondary block text-lg font-medium text-black duration-300 hover:translate-x-2"
+                      className="block text-lg font-medium text-black duration-300 hover:translate-x-2 hover:text-secondary"
                     >
                       {section}
                     </a>
