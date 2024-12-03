@@ -3,7 +3,7 @@ import { Carousel } from "../components";
 import { carouselData } from "../utils/carouselData";
 const Home = () => {
   return (
-    <section id="home" className="min-h-screen w-full bg-slate-200">
+    <section id="home" className="w-full bg-neutral-800">
       <Carousel images={carouselData} />
     </section>
   );

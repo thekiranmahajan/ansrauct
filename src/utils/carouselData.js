@@ -18,7 +18,7 @@ export const carouselData = [
       "Our courses are designed to create a meaningful learning experience. The courses are developed using new and emerging technologies, principles of instructional design, and our knowledge of learner behavior gathered from our decades of experience. All our courses aim to boost knowledge retention and skill development.",
   },
   {
-    image: "/src/assets/carousel/testimonial.webp",
+    image: "/src/assets/carousel/testimonials.webp",
     title: "Testimonials",
     description:
       "Everything we do is centered around a single goal: to give our clients what they want in exactly the manner they want it. We invest in providing seamless end-to-end services for our clients. Take a peek at what our clients have to say when they work with us.",
