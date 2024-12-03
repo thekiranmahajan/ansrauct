@@ -9,7 +9,7 @@ const CarouselDots = ({ imgIndex, setImgIndex }) => {
           <button
             key={index}
             onClick={() => setImgIndex(index)}
-            className={`h-3 w-3 rounded-full transition-colors ${
+            className={`h-2 w-2 rounded-full transition-colors sm:h-3 sm:w-3 ${
               index === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
             }`}
           />

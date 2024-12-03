@@ -39,7 +39,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-neutral-900 py-8">
+    <div className="relative overflow-hidden bg-neutral-900 py-5">
       <motion.div
         drag="x"
         dragConstraints={{

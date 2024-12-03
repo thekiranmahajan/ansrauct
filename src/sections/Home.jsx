@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="flex w-full items-center justify-center bg-neutral-800 pt-5"
+      className="flex h-full w-full items-center justify-center pt-14"
     >
       <Carousel />
     </section>

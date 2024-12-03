@@ -19,12 +19,14 @@ const CarouselImages = ({ imgIndex }) => {
               scale: imgIndex === index ? 0.95 : 0.85,
             }}
             transition={SPRING_OPTIONS}
-            className="relative aspect-video w-screen shrink-0 overflow-hidden rounded-xl bg-neutral-800 object-cover"
+            className="relative flex aspect-video w-screen shrink-0 items-start justify-center overflow-hidden rounded-xl bg-neutral-800 object-cover"
           >
-            <div className="absolute inset-0 flex w-1/3 flex-col items-center justify-center rounded-s-lg rounded-t-lg border border-white/20 bg-black/40 p-6 text-primary shadow-lg backdrop-blur-md">
-              <h2 className="text-3xl font-bold">{imageData.title}</h2>
-              <p className="mt-4 w-3/4 text-center text-white">
-                {imageData.description}
+            <div className="flex w-full flex-col items-center justify-center bg-gradient-to-b from-black/60 via-black/40 to-transparent px-4 py-2 pt-2 text-white sm:p-6 md:p-10">
+              <h2 className="text-xl font-bold sm:text-2xl md:text-3xl">
+                {imageData?.title}
+              </h2>
+              <p className="mt-1 w-full text-center text-xs text-gray-50 sm:text-base md:mt-4">
+                {imageData?.description}
               </p>
             </div>
           </motion.div>
