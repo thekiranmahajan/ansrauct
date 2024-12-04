@@ -9,11 +9,11 @@ const TestimonialCard = ({
   position,
   companyName,
   feedback,
-  Linkedin
+  Linkedin,
 }) => {
   return (
     <div
-      className={`rounded-2xl p-4 text-white shadow-xl duration-300 hover:scale-105`}
+      className={`rounded-2xl p-4 text-white shadow-xl duration-300 hover:-translate-y-2`}
       style={{ backgroundColor: bgColor }}
     >
       <div className="flex items-start justify-between">
@@ -28,7 +28,9 @@ const TestimonialCard = ({
             <IoPersonCircleSharp className="h-16 w-16 rounded-full bg-gray-400" />
           )}
         </div>
-        <a href={Linkedin}><FaLinkedin className="text-4xl text-neutral-200" /></a>
+        <a href={Linkedin}>
+          <FaLinkedin className="text-4xl text-neutral-200" />
+        </a>
       </div>
       <h3 className="text-lg font-bold">{name}</h3>
       <p className="text-sm">{position}</p>

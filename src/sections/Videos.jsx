@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { sectionsData } from "../data/sectionsData";
-import { SectionHeader, VideoCard, VideoPopup } from "../components";
+import { SectionHeader, VideoCard } from "../components";
 import { videosData } from "../data/videosData";
 
 const Videos = () => {

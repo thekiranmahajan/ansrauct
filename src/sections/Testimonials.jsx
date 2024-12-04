@@ -6,7 +6,7 @@ const Testimonials = () => {
   return (
     <section
       id={sectionsData[4].heading.toLowerCase()}
-      className="flex flex-col min-h-screen w-full items-center duration-500 dark:bg-gray-50"
+      className="flex min-h-screen w-full flex-col items-center duration-500 dark:bg-gray-50"
     >
       <SectionHeader
         heading={sectionsData[4].heading}

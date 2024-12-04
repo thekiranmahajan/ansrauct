@@ -1,13 +1,17 @@
 import React from "react";
 import { sectionsData } from "../data/sectionsData";
+import { SectionHeader } from "../components";
 
 const Courses = () => {
   return (
     <section
       id={sectionsData[3].heading.toLowerCase()}
-      className="min-h-screen w-full bg-slate-700"
+      className="flex min-h-screen w-full flex-col items-center"
     >
-      Courses
+      <SectionHeader
+        heading={sectionsData[3].heading}
+        subHeading={sectionsData[3].subHeading}
+      />
     </section>
   );
 };

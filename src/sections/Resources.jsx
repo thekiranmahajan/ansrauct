@@ -1,13 +1,17 @@
 import React from "react";
 import { sectionsData } from "../data/sectionsData";
+import { SectionHeader } from "../components";
 
 const Resources = () => {
   return (
     <section
       id={sectionsData[2].heading.toLowerCase()}
-      className="min-h-screen w-full bg-slate-500"
+      className="flex min-h-screen w-full flex-col items-center"
     >
-      Resources
+      <SectionHeader
+        heading={sectionsData[2].heading}
+        subHeading={sectionsData[2].subHeading}
+      />
     </section>
   );
 };
