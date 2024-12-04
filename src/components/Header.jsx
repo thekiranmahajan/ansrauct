@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { SECTIONS } from "../utils/constants";
+import { sectionsData } from "../data/sectionsData";
 import { motion } from "motion/react";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { debounce } from "lodash";
@@ -13,8 +13,8 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = debounce(() => {
       const scrollPosition = window.scrollY + window.innerHeight / 2;
-      const sectionElements = SECTIONS.map((section) =>
-        document.getElementById(section.toLowerCase()),
+      const sectionElements = sectionsData.map((section) =>
+        document.getElementById(section.heading.toLowerCase()),
       );
 
       sectionElements.forEach((section, index) => {
@@ -23,7 +23,7 @@ const Header = () => {
           scrollPosition >= section.offsetTop &&
           scrollPosition < section.offsetTop + section.offsetHeight
         ) {
-          setActiveSection(SECTIONS[index]);
+          setActiveSection(sectionsData[index].heading);
         }
       });
     }, 50);
@@ -35,7 +35,7 @@ const Header = () => {
     <nav className="fixed z-50 flex h-14 w-full items-center justify-between border-b-2 border-secondary bg-white px-3 sm:px-10">
       <LogoDuplet />
       <ul className="hidden gap-4 text-sm font-medium uppercase md:flex">
-        {SECTIONS?.map((section) => (
+        {sectionsData?.map(({ heading: section }) => (
           <li key={section}>
             <a
               href={`#${section?.toLocaleLowerCase()}`}
@@ -83,7 +83,7 @@ const Header = () => {
               className="fixed right-0 top-0 z-40 h-full w-64 bg-white shadow-lg"
             >
               <ul className="flex flex-col gap-4 p-6">
-                {SECTIONS.map((section) => (
+                {sectionsData.map(({ heading: section, id }) => (
                   <li key={section}>
                     <a
                       href={`#${section.toLowerCase()}`}

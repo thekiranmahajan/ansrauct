@@ -4,7 +4,7 @@ import LogoDuplet from "./LogoDuplet";
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-900 px-6 py-8 text-gray-400">
+    <footer className="w-full bg-neutral-900 px-6 py-8 text-gray-400">
       <div className="mx-auto flex max-w-7xl flex-col items-center md:flex-row md:items-start md:justify-between">
         <div className="mb-6 text-center md:mb-0 md:text-left">
           <LogoDuplet isFooter />

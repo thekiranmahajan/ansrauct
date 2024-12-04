@@ -1,8 +1,12 @@
 import React from "react";
+import { sectionsData } from "../data/sectionsData";
 
 const Resources = () => {
   return (
-    <section id="resources" className="min-h-screen w-full bg-slate-500">
+    <section
+      id={sectionsData[2].heading.toLowerCase()}
+      className="min-h-screen w-full bg-slate-500"
+    >
       Resources
     </section>
   );
