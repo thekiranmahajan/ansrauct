@@ -1,6 +1,11 @@
-const testimonialData = [
+const color_ModerateViolet = "hsl(263, 55%, 52%)";
+const color_VeryDarkGrayishBlue = "hsl(217, 19%, 35%)";
+
+export const testimonialData = [
   {
     id: 1,
+    className: "col-span-2 row-span-1",
+    bgColor: color_ModerateViolet,
     profileImg: "",
     name: "Natasha Russell",
     position: "PhD, Global Cocoa Supplier - Quality Assurance Lead",
@@ -11,6 +16,7 @@ const testimonialData = [
   },
   {
     id: 2,
+    bgColor: color_VeryDarkGrayishBlue,
     profileImg: "",
     name: "David Gellie",
     position: "Global Pet Nutrition Supplier Quality Assurance",
@@ -21,6 +27,8 @@ const testimonialData = [
   },
   {
     id: 3,
+    className: "md:row-span-2",
+    bgColor: color_ModerateViolet,
     profileImg: "",
     name: "Nicole Röhrs",
     position: "GPET – Business Process Coordinator",
@@ -31,6 +39,7 @@ const testimonialData = [
   },
   {
     id: 4,
+    bgColor: color_ModerateViolet,
     profileImg: "",
     name: "Dana Hafeed",
     position: "VP P&O EM",
@@ -41,6 +50,8 @@ const testimonialData = [
   },
   {
     id: 5,
+    className: "md:col-span-2",
+    bgColor: color_VeryDarkGrayishBlue,
     profileImg: "",
     name: "Victoria Veninga",
     position: "L&D Talent & Change Projects",
