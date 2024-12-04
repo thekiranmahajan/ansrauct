@@ -1,5 +1,5 @@
 import React from "react";
-import { carouselData } from "../utils/carouselData";
+import { carouselData } from "../data/carouselData";
 
 const CarouselDots = ({ imgIndex, setImgIndex }) => {
   return (

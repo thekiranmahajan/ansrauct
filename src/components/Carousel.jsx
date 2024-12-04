@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "motion/react";
 import CarouselDots from "./CarouselDots";
 import CarouselEdges from "./CarouselEdges";
-import { carouselData } from "../utils/carouselData";
+import { carouselData } from "../data/carouselData";
 import { AUTO_DELAY, DRAG_BUFFER, SPRING_OPTIONS } from "../utils/constants";
 import CarouselImages from "./CarouselImages";
 

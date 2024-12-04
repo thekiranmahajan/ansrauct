@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { carouselData } from "../utils/carouselData";
+import { carouselData } from "../data/carouselData";
 import { SPRING_OPTIONS } from "../utils/constants";
 
 const CarouselImages = ({ imgIndex }) => {

@@ -2,8 +2,11 @@ import React from "react";
 
 const Videos = () => {
   return (
-    <section id="videos" className="min-h-screen w-full bg-slate-300">
-      Videos
+    <section
+      id="videos"
+      className="flex min-h-screen w-full flex-col items-center p-5 md:w-11/12"
+    >
+   
     </section>
   );
 };
