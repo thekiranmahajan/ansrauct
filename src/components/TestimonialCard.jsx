@@ -1,22 +1,43 @@
-import React from 'react';
+import React from "react";
+import { FaQuoteRight, FaQuoteLeft, FaLinkedin } from "react-icons/fa6";
+import { IoPersonCircleSharp } from "react-icons/io5";
 
-const TestimonialCard = ({ bgColor, profileImg, name, position, companyName, feedback }) => {
+const TestimonialCard = ({
+  bgColor,
+  profileImg,
+  name,
+  position,
+  companyName,
+  feedback,
+  Linkedin
+}) => {
   return (
     <div
-      className={`p-4 rounded-lg text-white shadow-md`}
+      className={`rounded-2xl p-4 text-white shadow-xl duration-300 hover:scale-105`}
       style={{ backgroundColor: bgColor }}
     >
-      <div className="mb-4">
-        {profileImg ? (
-          <img src={profileImg} alt={name} className="w-16 h-16 rounded-full" />
-        ) : (
-          <div className="w-16 h-16 bg-gray-400 rounded-full" />
-        )}
+      <div className="flex items-start justify-between">
+        <div className="mb-4">
+          {profileImg ? (
+            <img
+              src={profileImg}
+              alt={name}
+              className="h-16 w-16 rounded-full object-cover"
+            />
+          ) : (
+            <IoPersonCircleSharp className="h-16 w-16 rounded-full bg-gray-400" />
+          )}
+        </div>
+        <a href={Linkedin}><FaLinkedin className="text-4xl text-neutral-200" /></a>
       </div>
-      <h3 className="font-bold text-lg">{name}</h3>
+      <h3 className="text-lg font-bold">{name}</h3>
       <p className="text-sm">{position}</p>
       <p className="italic">{companyName}</p>
-      <p className="mt-2 text-sm">{feedback}</p>
+      <p className="mt-2 text-sm text-neutral-200">
+        <FaQuoteLeft />
+        {feedback}
+        <FaQuoteRight />
+      </p>
     </div>
   );
 };
