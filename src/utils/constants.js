@@ -5,14 +5,6 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
-//Header
-export const SECTIONS = [
-  "Home",
-  "Videos",
-  "Resources",
-  "Courses",
-  "Testimonials",
-];
 
 // Footer
 export const SOCIAL_LINKS = [
