@@ -1,12 +1,12 @@
 import React from "react";
-
+import { TestimonialGrid } from "../components";
 const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="min-h-screen w-full bg-slate-800 duration-500 dark:bg-gray-50"
+      className="min-h-screen w-full bg-white duration-500 dark:bg-gray-50"
     >
-      Testimonials
+      <TestimonialGrid />
     </section>
   );
 };
