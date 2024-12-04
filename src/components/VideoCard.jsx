@@ -1,44 +1,58 @@
-import { motion } from "motion/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import VideoPopup from "./VideoPopup";
 
-const VideoCard = ({ title, description, videoSrc }) => {
-  const [isPopupOpen, setPopupOpen] = useState(false);
+const VideoCard = ({
+  video,
+  poster,
+  title,
+  description,
+  isPopupOpen,
+  setPopupOpen,
+}) => {
+  const videoRef = useRef(null);
 
-  const openPopup = () => setPopupOpen(true);
-  const closePopup = () => setPopupOpen(false);
+  const openPopup = () => {
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+    setPopupOpen(false);
+  };
+
   return (
-    <div className="max-w-sm overflow-hidden rounded-lg bg-white shadow-lg">
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        className="cursor-pointer"
-        onClick={openPopup}
-      >
-        <img
-          src="https://via.placeholder.com/400x200"
-          alt="Poster"
-          className="w-full"
-        />
-      </motion.div>
-      <div className="p-4">
-        <h3 className="text-lg font-bold">{title}</h3>
-        <p className="text-sm text-gray-600">{description}</p>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
+    <>
+      <div className="max-w-sm overflow-hidden rounded-lg bg-white shadow-xl duration-300 hover:-translate-y-2 active:shadow-sm">
+        <div
+          className="relative cursor-pointer duration-500 hover:scale-110"
           onClick={openPopup}
-          className="mt-2 flex items-center font-bold text-blue-500"
         >
-          <FaPlay className="mr-2" />
-          Watch Now
-        </motion.button>
+          <FaPlay className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-3xl text-white/70" />
+          <img src={poster} alt="Poster" className="w-full" />
+        </div>
+        <div className="p-4">
+          <h3 className="pb-1 text-base font-bold sm:text-lg">{title}</h3>
+          <p className="text-xs text-gray-600 sm:text-sm">{description}</p>
+          <button
+            onClick={openPopup}
+            className="mt-3 flex items-center font-bold text-secondary duration-300 hover:scale-105"
+          >
+            <FaPlay className="mr-2" />
+            Watch Now
+          </button>
+        </div>
       </div>
       <VideoPopup
         isOpen={isPopupOpen}
-        videoSrc={videoSrc}
+        videoSrc={video}
         onClose={closePopup}
+        videoRef={videoRef}
       />
-    </div>
+    </>
   );
 };
 
