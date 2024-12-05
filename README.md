@@ -172,8 +172,11 @@ Serve the `dist/` folder on a static hosting platform of your choice (e.g. demo 
 
 ## Scope for Improvements
 
--
--
+- Improve Hamburger menu design and animation for a smoother UI/UX.
+- Improved masonry grid for Testimonial cards.
+- Adding some elements to the white plain background.
+- Improving SEO and accessibilty.
+- Abstracting and optimising the code.
 
 ## Acknowledgments
 
