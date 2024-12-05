@@ -150,7 +150,11 @@ ANSRAUCT/
    - Import newly added assets and save
 
 7. Changing color palate according to client:
+
    - Go to `tailwind.config.js` file and change the primary and secondary custom colors with new hex codes under colors object.
+
+8. Change required constants:
+   - Replace the links in `constants.js`
 
 ### Build for Production
 
@@ -181,6 +185,7 @@ Serve the `dist/` folder on a static hosting platform of your choice (e.g. demo 
 - Adding some elements to the white plain background.
 - Improving SEO and accessibilty.
 - Abstracting and optimising the code.
+- Fetching linked profile image of testimonial section using a API call.
 
 ## Acknowledgments
 
