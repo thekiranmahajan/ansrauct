@@ -11,11 +11,11 @@ const ResourceCard = ({ title, description, link, btnText }) => {
         </div>
 
         <div className="grid grid-cols-1 space-x-8 text-gray-700 sm:grid-cols-5">
-          <p className="col-span-1 m-auto">
+          <div className="col-span-1 m-auto">
             <div className="relative h-full w-full overflow-hidden p-2">
               <FaFilePdf className="text-8xl text-secondary/90 transition duration-300 hover:scale-110" />
             </div>
-          </p>
+          </div>
           <div className="col-span-4 flex flex-col space-y-3 pr-6 text-left">
             <p className="mt-3 overflow-hidden text-2xl font-semibold">
               {title}

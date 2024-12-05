@@ -1,4 +1,4 @@
-export const ResourcesData = [
+export const resourcesData = [
   {
     id: "1",
     title: "Mars Leadership Competencies Interactive PDF",

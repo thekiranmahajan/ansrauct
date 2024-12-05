@@ -2,7 +2,8 @@ import React from "react";
 import { sectionsData } from "../data/sectionsData";
 import { SectionHeader } from "../components";
 import { ResourceCard } from "../components";
-import { ResourcesData } from "../data/resourcesData";
+import { resourcesData } from "../data/ResourcesData";
+
 const Resources = () => {
   return (
     <section
@@ -14,7 +15,7 @@ const Resources = () => {
         subHeading={sectionsData[2].subHeading}
       />
       <div className="p-4 px-2 pb-20 pt-10 sm:px-16 md:pb-28">
-        {ResourcesData.map((Resources) => (
+        {resourcesData.map((Resources) => (
           <div key={Resources.id}>
             <ResourceCard {...Resources} />
           </div>
