@@ -1,5 +1,6 @@
 {
   "name": "ansrauct",
+  "description": "This project is a responsive web application built to showcase ANSRSource's past projects for clients. It features five dynamic sections: Home, Videos, Resources, Courses, and Testimonials. Each section demonstrates ANSRSource's expertise through interactive and visually appealing components. The website is designed for client engagement, featuring smooth animations, responsive design, and dynamic content.",
   "private": true,
   "version": "1.0.0",
   "type": "module",
