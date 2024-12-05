@@ -1,7 +1,7 @@
 import React from "react";
 import { sectionsData } from "../data/sectionsData";
-import { SectionHeader } from "../components";
-
+import { CourseCard, SectionHeader } from "../components";
+import { coursesData } from "../data/coursesData";
 const Courses = () => {
   return (
     <section
@@ -12,7 +12,20 @@ const Courses = () => {
         heading={sectionsData[3].heading}
         subHeading={sectionsData[3].subHeading}
       />
-      <div className="flex w-full flex-col items-center md:w-10/12"></div>
+      <div className="flex h-full flex-col justify-center gap-6 px-2 pb-20 pt-6 sm:gap-8 sm:py-12 md:w-11/12 md:pb-28 lg:w-10/12">
+        {coursesData.map(
+          ({ id, title, description, btnText, coursePoster, link }) => (
+            <CourseCard
+              key={id}
+              title={title}
+              description={description}
+              btnText={btnText}
+              coursePoster={coursePoster}
+              link={link}
+            />
+          ),
+        )}
+      </div>
     </section>
   );
 };
