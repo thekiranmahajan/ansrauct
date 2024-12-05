@@ -8,7 +8,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-white
+    @apply bg-white;
   }
 
   ::-webkit-scrollbar-thumb {

@@ -6,4 +6,5 @@ export { default as TestimonialCard } from "./TestimonialCard.jsx";
 export { default as TestimonialGrid } from "./TestimonialGrid.jsx";
 export { default as SectionHeader } from "./SectionHeader.jsx";
 export { default as VideoCard } from "./VideoCard.jsx";
-export { default as VideoPopup } from "./VideoPopup.jsx";
+export { default as Button } from "./Button.jsx";
+export { default as CourseCard } from "./CourseCard.jsx";
