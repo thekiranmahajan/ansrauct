@@ -1,7 +1,7 @@
 import React from "react";
 import { sectionsData } from "../data/sectionsData";
 import { SectionHeader } from "../components";
-
+import { ResourceCard } from "../components";
 const Resources = () => {
   return (
     <section
@@ -12,6 +12,7 @@ const Resources = () => {
         heading={sectionsData[2].heading}
         subHeading={sectionsData[2].subHeading}
       />
+      <ResourceCard />
     </section>
   );
 };
