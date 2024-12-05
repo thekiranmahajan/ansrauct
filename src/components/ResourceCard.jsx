@@ -4,9 +4,8 @@ import Button from "./Button";
 
 const ResourceCard = ({ title, description, link, btnText }) => {
   return (
-    <div className="m-5">
+    <div className="-m-1 sm:m-2">
       <div className="relative mx-5 mt-10 max-w-screen-lg overflow-hidden rounded-lg py-3 shadow transition hover:shadow-lg sm:mx-auto">
-        {/* Gradient Border */}
         <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-r from-primary to-secondary p-[2px]">
           <div className="h-full w-full rounded-lg bg-white"></div>
         </div>
