@@ -13,11 +13,13 @@ const Resources = () => {
         heading={sectionsData[2].heading}
         subHeading={sectionsData[2].subHeading}
       />
-      {ResourcesData.map((Resources) => (
-        <div key={Resources.id}>
-          <ResourceCard {...Resources} />
-        </div>
-      ))}
+      <div className="p-4 px-2 pb-20 pt-10 sm:px-16 md:pb-28">
+        {ResourcesData.map((Resources) => (
+          <div key={Resources.id}>
+            <ResourceCard {...Resources} />
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

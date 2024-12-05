@@ -4,8 +4,8 @@ import Button from "./Button";
 
 const ResourceCard = ({ title, description, link, btnText }) => {
   return (
-    <div className="-m-1 sm:m-2">
-      <div className="relative mx-5 mt-10 max-w-screen-lg overflow-hidden rounded-lg py-3 shadow transition hover:shadow-lg sm:mx-auto">
+    <div className="">
+      <div className="relative mt-10 max-w-screen-lg overflow-hidden rounded-lg py-3 shadow transition hover:shadow-lg sm:mx-auto">
         <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-r from-primary to-secondary p-[2px]">
           <div className="h-full w-full rounded-lg bg-white"></div>
         </div>
@@ -13,7 +13,7 @@ const ResourceCard = ({ title, description, link, btnText }) => {
         <div className="grid grid-cols-1 space-x-8 text-gray-700 sm:grid-cols-5">
           <p className="col-span-1 m-auto">
             <div className="relative h-full w-full overflow-hidden p-2">
-              <FaFilePdf className="text-8xl text-primary transition duration-300 hover:scale-110" />
+              <FaFilePdf className="text-8xl text-secondary/90 transition duration-300 hover:scale-110" />
             </div>
           </p>
           <div className="col-span-4 flex flex-col space-y-3 pr-6 text-left">
