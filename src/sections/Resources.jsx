@@ -2,7 +2,7 @@ import React from "react";
 import { sectionsData } from "../data/sectionsData";
 import { SectionHeader } from "../components";
 import { ResourceCard } from "../components";
-import { ResourcesData } from "../data/ResourcesData";
+import { ResourcesData } from "../data/resourcesData";
 const Resources = () => {
   return (
     <section
