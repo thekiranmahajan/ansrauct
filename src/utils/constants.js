@@ -5,7 +5,6 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
-
 // Footer
 export const SOCIAL_LINKS = [
   { href: "https://facebook.com", label: "Facebook", icon: FaFacebookF },

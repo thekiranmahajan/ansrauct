@@ -12,6 +12,7 @@ const Courses = () => {
         heading={sectionsData[3].heading}
         subHeading={sectionsData[3].subHeading}
       />
+      <div className="flex w-full flex-col items-center md:w-10/12"></div>
     </section>
   );
 };

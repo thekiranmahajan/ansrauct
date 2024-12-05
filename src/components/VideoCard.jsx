@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { FaPlay } from "react-icons/fa";
 import VideoPopup from "./VideoPopup";
 
