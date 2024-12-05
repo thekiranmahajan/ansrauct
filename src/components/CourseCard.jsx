@@ -11,7 +11,7 @@ const CourseCard = ({ title, description, btnText, coursePoster, link }) => {
         <h4 className="pb-2 text-center text-xl font-semibold sm:text-2xl lg:pb-4 lg:text-3xl">
           {title}
         </h4>
-        <p className="text-center text-xs text-gray-500 sm:text-sm">
+        <p className="text-center text-sm text-gray-600">
           {description}
         </p>
 

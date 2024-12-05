@@ -36,7 +36,7 @@ const VideoCard = ({
         </div>
         <div className="p-4">
           <h3 className="pb-1 text-base font-bold sm:text-lg">{title}</h3>
-          <p className="text-xs text-gray-600 sm:text-sm">{description}</p>
+          <p className="text-sm text-gray-600">{description}</p>
           <button
             onClick={openPopup}
             className="mt-3 flex items-center font-bold text-secondary duration-300 hover:scale-105"

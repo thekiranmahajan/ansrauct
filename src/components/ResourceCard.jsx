@@ -20,7 +20,7 @@ const ResourceCard = ({ title, description, link, btnText }) => {
             <p className="mt-3 overflow-hidden text-2xl font-semibold">
               {title}
             </p>
-            <p className="overflow-hidden text-sm">{description}</p>
+            <p className="overflow-hidden text-sm text-gray-600">{description}</p>
             <div className="mt-5 flex w-full items-center justify-center md:justify-start xl:mt-10">
               <Button link={link} btnText={btnText} />
             </div>
