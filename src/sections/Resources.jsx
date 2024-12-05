@@ -14,7 +14,7 @@ const Resources = () => {
         subHeading={sectionsData[2].subHeading}
       />
       {ResourcesData.map((Resources) => (
-        <div key={Resources.id} className="mb-4">
+        <div key={Resources.id}>
           <ResourceCard {...Resources} />
         </div>
       ))}
