@@ -6,7 +6,7 @@ const Button = ({ btnText = "Click", link = "#_" }) => {
       href={link}
       role="button"
       target="_blank"
-      className="group relative inline-flex items-center justify-start overflow-hidden rounded-xl bg-primary px-6 py-3 font-medium transition-all duration-300 hover:-translate-y-1 active:scale-95"
+      className="group relative inline-flex items-center justify-start overflow-hidden rounded-xl bg-primary px-6 py-3 font-medium transition-all duration-300 hover:-translate-y-1 active:scale-95 shadow-xl"
     >
       <span className="absolute right-0 top-0 inline-block h-4 w-4 rounded bg-secondary transition-all duration-500 ease-in-out group-hover:-mr-4 group-hover:-mt-4">
         <span className="absolute right-0 top-0 h-5 w-5 -translate-y-1/2 translate-x-1/2 rotate-45 bg-white"></span>
