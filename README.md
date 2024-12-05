@@ -145,8 +145,12 @@ ANSRAUCT/
    - also export them them from respective index.js file in order to import them in our data files.
 
 6. Dynamic Data:
+
    - Update content in `src/data` for Videos, Courses, Resources, etc.
    - Import newly added assets and save
+
+7. Changing color palate according to client:
+   - Go to `tailwind.config.js` file and change the primary and secondary custom colors with new hex codes under colors object.
 
 ### Build for Production
 
