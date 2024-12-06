@@ -186,6 +186,8 @@ Serve the `dist/` folder on a static hosting platform of your choice (e.g. demo 
 - Improving SEO and accessibilty.
 - Abstracting and optimising the code.
 - Fetching linked profile image of testimonial section using a API call.
+- Shimmer for all loading components
+- making all fields dynamic to handle the HTML insertion as text for more custom output
 
 ## Acknowledgments
 
