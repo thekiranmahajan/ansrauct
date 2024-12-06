@@ -7,13 +7,15 @@ const VideoCard = ({
   poster,
   title,
   description,
-  isPopupOpen,
-  setPopupOpen,
+  isActive,
+  setActiveVideoId,
+  id,
+  isHtmlDescription = false,
 }) => {
   const videoRef = useRef(null);
 
   const openPopup = () => {
-    setPopupOpen(true);
+    setActiveVideoId(id);
   };
 
   const closePopup = () => {
@@ -21,7 +23,7 @@ const VideoCard = ({
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
-    setPopupOpen(false);
+    setActiveVideoId(null);
   };
 
   return (
@@ -36,7 +38,14 @@ const VideoCard = ({
         </div>
         <div className="p-4">
           <h3 className="pb-1 text-base font-bold sm:text-lg">{title}</h3>
-          <p className="text-sm text-gray-600">{description}</p>
+          {isHtmlDescription ? (
+            <div
+              className="text-sm text-gray-600"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+          ) : (
+            <p className="text-sm text-gray-600">{description}</p>
+          )}
           <button
             onClick={openPopup}
             className="mt-3 flex items-center font-bold text-secondary duration-300 hover:scale-105"
@@ -46,12 +55,14 @@ const VideoCard = ({
           </button>
         </div>
       </div>
-      <VideoPopup
-        isOpen={isPopupOpen}
-        videoSrc={video}
-        onClose={closePopup}
-        videoRef={videoRef}
-      />
+      {isActive && (
+        <VideoPopup
+          isOpen={isActive}
+          videoSrc={video}
+          onClose={closePopup}
+          videoRef={videoRef}
+        />
+      )}
     </>
   );
 };

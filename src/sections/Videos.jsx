@@ -4,7 +4,7 @@ import { SectionHeader, VideoCard } from "../components";
 import { videosData } from "../data/videosData";
 
 const Videos = () => {
-  const [isPopupOpen, setPopupOpen] = useState(false);
+  const [activeVideoId, setActiveVideoId] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,7 +14,7 @@ const Videos = () => {
       const rect = videoSection.getBoundingClientRect();
 
       if (rect.bottom < 0 || rect.top > window.innerHeight) {
-        setPopupOpen(false);
+        setActiveVideoId(null);
       }
     };
 
@@ -34,17 +34,21 @@ const Videos = () => {
 
       <div className="relative flex h-full flex-col justify-center px-2 pb-20 pt-6 sm:py-12 md:pb-28">
         <div className="columns-1 gap-6 space-y-6 sm:columns-2 lg:columns-3">
-          {videosData.map(({ video, poster, title, description, id }) => (
-            <VideoCard
-              key={id}
-              video={video}
-              poster={poster}
-              title={title}
-              description={description}
-              isPopupOpen={isPopupOpen}
-              setPopupOpen={setPopupOpen}
-            />
-          ))}
+          {videosData.map(
+            ({ video, poster, title, description, id, isHtmlDescription }) => (
+              <VideoCard
+                key={id}
+                video={video}
+                poster={poster}
+                title={title}
+                description={description}
+                isActive={activeVideoId === id}
+                setActiveVideoId={setActiveVideoId}
+                id={id}
+                isHtmlDescription={isHtmlDescription}
+              />
+            ),
+          )}
         </div>
       </div>
     </section>
