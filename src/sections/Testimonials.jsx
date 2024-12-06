@@ -1,6 +1,6 @@
 import React from "react";
 import { sectionsData } from "../data/sectionsData";
-import { TestimonialGrid } from "../components";
+import { LogoCarousel, TestimonialGrid } from "../components";
 import { SectionHeader } from "../components";
 const Testimonials = () => {
   return (
@@ -13,6 +13,7 @@ const Testimonials = () => {
         subHeading={sectionsData[4].subHeading}
       />
       <TestimonialGrid />
+      <LogoCarousel />
     </section>
   );
 };

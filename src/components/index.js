@@ -8,3 +8,4 @@ export { default as SectionHeader } from "./SectionHeader.jsx";
 export { default as VideoCard } from "./VideoCard.jsx";
 export { default as Button } from "./Button.jsx";
 export { default as CourseCard } from "./CourseCard.jsx";
+export { default as LogoCarousel } from "./LogoCarousel.jsx";
