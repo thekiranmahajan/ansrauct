@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { FaPlay } from "react-icons/fa";
 import VideoPopup from "./VideoPopup";
+import React, { useState } from "react";
 
 const VideoCard = ({
   video,
@@ -26,6 +27,9 @@ const VideoCard = ({
     setActiveVideoId(null);
   };
 
+  const [isLoaded, setIsLoaded] = useState(false);
+  const handleLoad = () => setIsLoaded(true);
+  const handleError = () => setIsLoaded(false);
   return (
     <>
       <div className="max-w-sm overflow-hidden rounded-lg bg-white shadow-xl duration-300 hover:-translate-y-2 active:shadow-sm">
@@ -34,7 +38,19 @@ const VideoCard = ({
           onClick={openPopup}
         >
           <FaPlay className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-3xl text-white/70" />
-          <img src={poster} alt="Poster" className="w-full" />
+          <div className="card">
+            {!isLoaded && (
+              <div className="h-[191px] w-full animate-pulse bg-slate-300"></div>
+            )}
+            <img
+              src={poster}
+              alt="Poster"
+              className="w-full"
+              style={{ display: isLoaded ? "block" : "none" }}
+              onLoad={handleLoad}
+              onError={handleError}
+            />
+          </div>
         </div>
         <div className="p-4">
           <h3 className="pb-1 text-base font-bold sm:text-lg">{title}</h3>

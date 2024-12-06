@@ -11,7 +11,7 @@ const CourseCard = ({
 }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-5 sm:px-6 md:px-0 lg:flex-row">
-      <div className="h-full max-w-lg overflow-hidden rounded-xl shadow-lg duration-300 hover:-rotate-1">
+      <div className="h-full max-w-lg overflow-hidden rounded-xl shadow-lg duration-300 hover:-rotate-1 bg-slate-300">
         <img className="w-full" src={coursePoster} alt="Course Poster" />
       </div>
       <div className="sm:w-11/12 lg:px-10">
