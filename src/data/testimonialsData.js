@@ -34,7 +34,7 @@ export const testimonialData = [
     companyName: "Mars GMBH",
     feedback:
       "I'm really impressed by the speed you conducted the latest updates and refinements. Great job and many thanks for your energy, flexibility and persistence!",
-    Linkedin: "https://www.linkedin.com/in/thekiranmahajan/",
+    Linkedin: "",
   },
   {
     id: 4,

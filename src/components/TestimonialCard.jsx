@@ -28,9 +28,11 @@ const TestimonialCard = ({
             <IoPersonCircleSharp className="h-16 w-16 rounded-full bg-gray-400" />
           )}
         </div>
-        <a href={Linkedin}>
-          <FaLinkedin className="text-4xl text-neutral-200" />
-        </a>
+        {Linkedin && (
+          <a href={Linkedin}>
+            <FaLinkedin className="text-4xl text-neutral-200" />
+          </a>
+        )}
       </div>
       <h3 className="text-lg font-bold">{name}</h3>
       <p className="text-sm">{position}</p>
