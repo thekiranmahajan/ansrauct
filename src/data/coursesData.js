@@ -77,8 +77,8 @@ export const coursesData = [
   {
     id: 9,
     title: "Micro Essentials Course – Preventive Controls",
-    description:
-      "This course was created for the leadership team at Mars and this particular module focuses on how Mars employees can demonstrate the Quality principle in action.",
+    isHtmlDescription: true,
+    description: `<p>This course was created for the leadership team at Mars and this particular module focuses on how Mars employees can demonstrate the Quality principle in action. <a href="#" class="text-blue-600">click here</a></p>`,
     btnText: "Launch",
     coursePoster: coursePoster3,
     link: "https://www.articulate.com/360/storyline/",
