@@ -29,7 +29,7 @@ const TestimonialCard = ({
           )}
         </div>
         {Linkedin && (
-          <a href={Linkedin}>
+          <a href={Linkedin} target="blank" rel="noopener noreferrer">
             <FaLinkedin className="text-4xl text-neutral-200" />
           </a>
         )}
