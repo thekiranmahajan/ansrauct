@@ -22,8 +22,8 @@ export const videosData = [
     video: video1,
     poster: poster1,
     title: "Mars Foreign Bodies Prevention Overview",
-    description:
-      "In order to improve product quality, Mars wanted to create a training program for their employees that would help them track and reduce the impurities found in the products. The goal of the training program was to help the workers identify the rogue elements that were present in raw materials and design countermeasures to ensure that the final product was free of foreign particles. The training was an overall success and was well received within Mars. The project won the Brandon Hall Bronze award for Best Advance in Education Delivered Through Technology in 2022!",
+    isHtmlDescription: true,
+    description: `In order to improve product quality, Mars wanted to create a training program for their employees that would help them track and reduce the impurities found in the products. The goal of the training program was to help the workers identify the rogue elements that were present in raw materials and design countermeasures to ensure that the final product was free of foreign particles. The training was an overall success and was well received within Mars.<span class="text-primary"> The project won the Brandon Hall Bronze award for Best Advance in Education Delivered Through Technology in 2022!</span>`,
   },
   {
     id: 4,
